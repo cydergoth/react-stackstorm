@@ -12,7 +12,7 @@ Note: This is an _example_ and will not run directly in your environment as it u
 Note: This example is NOT using ST2 event stream, which could shortcut a lot of the
       API calls
 
-[[timeline.pmg|Timeline image]]
+[Timeline](timeline.png)
 
 ## Prerquisites
 
