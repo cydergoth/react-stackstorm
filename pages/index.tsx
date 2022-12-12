@@ -87,8 +87,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <div>
-          <Stackstorm action="ablox_sre.parse_tenant_ff" params={{ cluster: "us-dev-mt-7", project: "starry-academy-177207", tenant: "abhiram-0922", zone: "us-east1-c" }} />
-        </div>
+          <Stackstorm action="<<< put your stackstorm action ref here >>>" params={{ << < put your stackstorm action parameters here >>> }} />
+          </div>
       </main>
 
     </div>
