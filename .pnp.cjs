@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.0.9"],\
             ["eslint", "npm:8.28.0"],\
             ["eslint-config-next", "virtual:af1eb1c705da8df91dff4e9c180166d677847415ee8983c3292d38d49fcef58303552d2c7da6f96205cd4969f3e71eeda72d0d6d0dc9141ec0c7031ff38616a5#npm:13.0.6"],\
+            ["moment", "npm:2.29.4"],\
             ["next", "virtual:af1eb1c705da8df91dff4e9c180166d677847415ee8983c3292d38d49fcef58303552d2c7da6f96205cd4969f3e71eeda72d0d6d0dc9141ec0c7031ff38616a5#npm:13.0.6"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:af1eb1c705da8df91dff4e9c180166d677847415ee8983c3292d38d49fcef58303552d2c7da6f96205cd4969f3e71eeda72d0d6d0dc9141ec0c7031ff38616a5#npm:18.2.0"],\
@@ -2974,6 +2975,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["moment", [\
+        ["npm:2.29.4", {\
+          "packageLocation": "./.yarn/cache/moment-npm-2.29.4-902943305d-0ec3f9c2bc.zip/node_modules/moment/",\
+          "packageDependencies": [\
+            ["moment", "npm:2.29.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["ms", [\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/ms-npm-2.0.0-9e1101a471-0e6a22b8b7.zip/node_modules/ms/",\
@@ -3641,6 +3651,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.0.9"],\
             ["eslint", "npm:8.28.0"],\
             ["eslint-config-next", "virtual:af1eb1c705da8df91dff4e9c180166d677847415ee8983c3292d38d49fcef58303552d2c7da6f96205cd4969f3e71eeda72d0d6d0dc9141ec0c7031ff38616a5#npm:13.0.6"],\
+            ["moment", "npm:2.29.4"],\
             ["next", "virtual:af1eb1c705da8df91dff4e9c180166d677847415ee8983c3292d38d49fcef58303552d2c7da6f96205cd4969f3e71eeda72d0d6d0dc9141ec0c7031ff38616a5#npm:13.0.6"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:af1eb1c705da8df91dff4e9c180166d677847415ee8983c3292d38d49fcef58303552d2c7da6f96205cd4969f3e71eeda72d0d6d0dc9141ec0c7031ff38616a5#npm:18.2.0"],\

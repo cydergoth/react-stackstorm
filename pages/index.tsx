@@ -3,12 +3,14 @@ import styles from '../styles/Home.module.css'
 import { useEffect, useState } from "react"
 import { Box } from '@mui/material'
 import {
-  timeline,
-  StackstormWorkflowTimeline,
   executeStackstormAction,
   StackstormExecId,
   StackstormResult
 } from "../utils/stackstorm"
+import {
+  timeline,
+  StackstormWorkflowTimeline,
+} from "../utils/stackstormTimeline";
 import * as React from 'react';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -17,6 +19,7 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent, { timelineOppositeContentClasses, } from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import moment from 'moment'
 //import CircularProgress from '@mui/material/CircularProgress';
 
 const Stackstorm = (props: any) => {
@@ -42,7 +45,7 @@ const Stackstorm = (props: any) => {
         timeline(workflow).map((l: StackstormWorkflowTimeline, i: number, log: StackstormWorkflowTimeline[]) =>
         (
           <TimelineItem key={i}>
-            <TimelineOppositeContent color="textSecondary">{l.timestamp.toLocaleString()}</TimelineOppositeContent>
+            <TimelineOppositeContent color="textSecondary">{moment.utc(l.elapsed.as('milliseconds')).format('HH:mm:ss.SSS')}</TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot />
               {(i == log.length - 1
