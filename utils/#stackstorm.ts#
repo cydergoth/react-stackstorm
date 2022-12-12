@@ -1,0 +1,34 @@
+import React from 'react';
+import { createMachine, assign } from 'xstate';
+
+interface StackstormStateContext {
+}
+
+type StackstormEvent = { type: 'CREATED' }
+    | { type: 'CHILD_CREATED' }
+    | { type: 'COMPLETED' }
+    ;
+
+
+const stackstormStateMachine = createMachine<StackstormStateContext, StackstormEvent>({
+    id: 'stacksformState',
+    initial: 'creating',
+    predictableActionArguments: true,
+    context: {},
+    states: {
+        creating: {
+            invoke: {
+                src: 'st2_create_execution',
+                onDone: { target: 'polling' },
+                onError: { target: 'error' }
+            },
+            polling: {},
+            error: {
+                type: 'final'
+            }
+        }
+    }
+},
+    {
+    }
+);
