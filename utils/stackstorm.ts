@@ -159,7 +159,9 @@ export const executeStackstormAction = async <T>(request: StackstormExecRequest,
   service.start();
   service.send('EXEC', { request: request });
   // waitFor throws an Error if the timeout is exceeded
-  await waitFor(service, (state: State<StackstormStateCtx<T>, StackstormEvent, any, any, any>) => state.matches('complete'), { timeout: timeout });
+  await waitFor(service,
+    (state: State<StackstormStateCtx<T>, StackstormEvent, any, any, any>) => state.matches('complete'), { timeout: timeout }
+  );
   service.stop();
   return;
 }
