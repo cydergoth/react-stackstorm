@@ -28,6 +28,15 @@ Download this repo and run
 
 ``` bash
 $ yarn install
+
+```
+
+Then edit the files
+* [index.tsx](pages/index.tsx) - add you stackstorm call in the marked places
+* [.env.local](.env.local) - set the base URL of your Stackstorm server
+
+
+```bash
 $ yarn build && yarn start
 ```
 
